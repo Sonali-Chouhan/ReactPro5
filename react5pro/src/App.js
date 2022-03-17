@@ -1,23 +1,22 @@
 import React from "react";
 import Home from "./Component/Home";
-import Table from "./Component/Table";
-import From from "./Component/From";
+import LoginForm from "./Component/LoginForm";
+import Registration from "./Component/Registration";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
-
 function App() {
   return (
     <div className="App">
       <Router>
         <div className="header">
           <Link to="/">Home</Link>
-          <Link to="/form">Form</Link>
-          <Link to="/table">Table</Link>
+          <Link to="/userlogin">LoginForm</Link>
+          <Link to="/user-registration">Registration</Link>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/form" element={<From />} />
-          <Route path="/table" element={<Table />} />
+          <Route path="/userlogin" element={<LoginForm />} />
+          <Route path="/user-registration" element={<Registration/>} />
         </Routes>
       </Router>
     </div>
